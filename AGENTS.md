@@ -87,10 +87,26 @@ La **Fase 1 è consolidata nel perimetro tecnico verificato il 30 ottobre 2026**
 4. **Eseguire verifiche reali:** provare `npm test`, `npm run build` e test specifici per le funzionalità toccate, quando l'ambiente lo consente. Se non sono eseguiti, indicarlo.
 5. **Non simulare risultati:** non presentare una demo, un mock o un controllo per casi speciali come garanzia generale.
 6. **Proteggere i dati:** non introdurre credenziali, token, informazioni sanitarie reali o altri dati personali nel repository, negli esempi o nei log.
-7. **Versionare in modo leggibile:** privilegiare modifiche circoscritte, commit descrittivi, branch/PR per gli incrementi sostanziali; evitare di riscrivere la storia di `main`.
+7. **Versionare in modo leggibile:** per tutte le modifiche autorizzate usare un branch dedicato e una Pull Request, con commit descrittivi; non lavorare direttamente su `main` e rispettare il flusso operativo seguente.
 8. **Riportare l'esito:** file modificati, ragioni, test eseguiti e relativi risultati, limiti residui e rischi aperti.
 
-Per gli incarichi di **sola analisi/audit**, non modificare il codice, non aprire PR e non applicare correzioni senza una successiva richiesta esplicita.
+Per gli incarichi di **sola analisi/audit**, non modificare il codice, non creare branch, commit o PR e non applicare correzioni senza una successiva richiesta esplicita.
+
+### 6.1. Flusso Git operativo di Codex
+
+Il repository ufficiale è [Structive-hub/BLUEPRINT](https://github.com/Structive-hub/BLUEPRINT), pubblico e consultabile con [diritti riservati](DIRITTI.md), con cronologia indipendente dall'archivio storico privato. Il Ruleset attivo protegge `main`: richiede PR, controlli Linux/Windows riusciti, branch aggiornato, risoluzione delle conversazioni e Squash merge.
+
+1. **Verificare il punto di partenza:** controllare radice Git, branch, stato della working tree e `origin`. Prima di iniziare modifiche, verificare che `main` sia pulito e aggiornato rispetto a `origin/main`, senza eliminare modifiche locali. La destinazione ufficiale è `https://github.com/Structive-hub/BLUEPRINT.git`.
+2. **Separare analisi e modifica:** per sola analisi non creare branch, commit o PR senza richiesta. Per modifiche autorizzate lavorare su un branch dedicato derivato da `main`, mai direttamente su `main`.
+3. **Usare nomi circoscritti:** rispettare il nome richiesto dal proprietario; negli altri casi scegliere nomi descrittivi e limitati al compito. `chore/git-governance` identifica questo intervento documentale, non un branch generico per attività successive.
+4. **Preparare modifiche revisionabili:** creare commit leggibili che includano soltanto il perimetro autorizzato, controllare il diff ed eseguire le verifiche pertinenti. Per le attività di modifica autorizzate pubblicare il branch sul repository ufficiale e aprire una Pull Request verso `main`, riportando cambiamenti, test e limiti.
+5. **Mantenere il branch aggiornato:** confrontarlo con `origin/main` durante il lavoro e prima del merge. Integrare gli aggiornamenti necessari senza riscrivere la cronologia o forzare push; risolvere i conflitti preservando le decisioni approvate e rieseguire i controlli interessati.
+6. **Attendere entrambe le CI:** prima del merge devono essere riusciti `consolidamento (ubuntu-latest)` e `consolidamento (windows-latest)` sulla revisione corrente della PR. Non considerare sufficienti esiti riferiti a commit precedenti. Le conversazioni di revisione devono essere risolte.
+7. **Lasciare il merge al proprietario:** attendere revisione e autorizzazione esplicita del proprietario; non effettuare autonomamente merge e non attivare auto-merge. Per le PR approvate utilizzare esclusivamente **Squash merge**, nel rispetto del Ruleset. La sola disponibilità tecnica del merge non equivale ad autorizzazione.
+8. **Non creare worktree automaticamente:** se utili, proporli spiegando scopo, utilità e conseguenze per cartelle, branch e stato Git; attendere autorizzazione esplicita prima di crearli.
+9. **Rispettare le protezioni:** non usare force push, bypass del Ruleset o riscritture di cronologia senza autorizzazione specifica. Non interpretare l'autorizzazione a modificare file o aprire una PR come autorizzazione a tali operazioni.
+10. **Proteggere identità e dati:** autore e committer devono usare `Structive-hub <221842812+Structive-hub@users.noreply.github.com>`. Verificare i metadati prima della pubblicazione e non includere credenziali, dati riservati, recapiti personali o percorsi locali identificativi in file, commit, descrizioni PR o log.
+11. **Lasciare separato l'archivio:** non modificare `BLUEPRINT-archive`, non usarlo come destinazione di push, branch o PR e non trasferirne cronologia o riferimenti Git nel repository ufficiale. Le citazioni storiche nei documenti restano evidenze, non istruzioni operative.
 
 ## 7. UX in parallelo
 

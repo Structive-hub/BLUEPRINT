@@ -4,13 +4,13 @@
 
 > **Stato:** prototipo v0.2 (incremento 1). **Fase 1 (nucleo) consolidata sul perimetro tecnico verificato il 30 ottobre 2026**. Prima del passaggio alla Fase 2 restano da riesaminare i requisiti strutturali aperti, inclusa la predisposizione all'internazionalizzazione. Le capacità pianificate non sono automaticamente disponibili.
 
-> **Repository ufficiale — 31 ottobre 2026:** [Structive-hub/BLUEPRINT](https://github.com/Structive-hub/BLUEPRINT) è stato creato con cronologia indipendente e commit iniziale [`4634f8c`](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963). La [CI della baseline iniziale su Linux e Windows](https://github.com/Structive-hub/BLUEPRINT/actions/runs/41196069891) è superata. Il repository è attualmente **privato**, in preparazione alla consultazione pubblica. Il repository originario resta un archivio storico privato; le evidenze citate nei rapporti storici non appartengono alla nuova cronologia. Stato e verifiche: [Preparazione pubblica](docs/architecture/public-preparation.md).
+> **Repository ufficiale — 31 ottobre 2026:** [Structive-hub/BLUEPRINT](https://github.com/Structive-hub/BLUEPRINT) è **pubblico e consultabile**, con diritti riservati e cronologia indipendente dall'archivio storico privato. Il commit iniziale è [`4634f8c`](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963); la [CI della sincronizzazione documentale `f9fc23a`](https://github.com/Structive-hub/BLUEPRINT/actions/runs/41200946193) è superata su Linux e Windows. `main` è protetto da Ruleset e le modifiche passano da branch dedicati e Pull Request. Le evidenze dell'archivio privato non appartengono alla nuova cronologia. Stato, verifiche e governance: [rapporto di preparazione e pubblicazione](docs/architecture/public-preparation.md).
 
 ## Consultazione e diritti riservati
 
-**Blueprint sarà pubblico e consultabile su GitHub, ma non è distribuito come progetto open source. Non viene concessa una licenza generale di riutilizzo per codice, documentazione e materiali originali.** Restano ferme le condizioni GitHub, comprese consultazione e fork tramite la piattaforma, e le eccezioni previste dalla legge. Gli usi ulteriori richiedono l'autorizzazione dei rispettivi titolari: [avviso sui diritti](DIRITTI.md).
+**Blueprint è pubblico e consultabile su GitHub, ma non è distribuito come progetto open source. Non viene concessa una licenza generale di riutilizzo per codice, documentazione e materiali originali.** Restano ferme le condizioni GitHub, comprese consultazione e fork tramite la piattaforma, e le eccezioni previste dalla legge. Gli usi ulteriori richiedono l'autorizzazione dei rispettivi titolari: [avviso sui diritti](DIRITTI.md).
 
-I componenti di terzi mantengono le proprie licenze e attribuzioni, raccolte in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt); l'avviso sui materiali originali non le restringe. La provenienza documentata dei 16 asset UX/UI non certifica la titolarità: la conferma del proprietario resta necessaria prima della pubblicazione pubblica.
+I componenti di terzi mantengono le proprie licenze e attribuzioni, raccolte in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt); l'avviso sui materiali originali non le restringe. La provenienza documentata dei 16 asset UX/UI e la loro visibilità pubblica non certificano la titolarità: la verifica dei diritti sugli asset e sui relativi input resta responsabilità del proprietario e non è attestata dall'audit visivo.
 
 ## Che cos'è Blueprint
 
@@ -143,7 +143,7 @@ Le fasi sono il riferimento stabile. Non sostituirle con una roadmap nuova in as
 1. **Prima verificare il codice esistente** e distinguere funzionalità reali, simulate e pianificate.
 2. **Definire l'obiettivo del singolo incremento** e i criteri di verifica, senza allargare autonomamente il perimetro.
 3. **Implementare, testare e documentare** le modifiche con riferimenti al modello e alle decisioni approvate.
-4. **Usare Git/GitHub** per versionare il lavoro. Mantenere `main` come riferimento stabile e preferire modifiche isolate in branch e pull request quando possibile.
+4. **Usare Git/GitHub** per versionare il lavoro. Per ogni modifica autorizzata usare un branch dedicato e una Pull Request verso `main`, senza worktree automatici. Il Ruleset richiede CI Linux/Windows riuscite, branch aggiornato e conversazioni risolte. Usare Squash merge soltanto dopo revisione e autorizzazione del proprietario; Codex non effettua autonomamente il merge. Il flusso completo è in [AGENTS.md](AGENTS.md#61-flusso-git-operativo-di-codex).
 5. **Coordinare l'evoluzione con la UX**, esplorata in parallelo: non considerare i mockup una prova che il motore corrispondente esista già.
 
 Per i dettagli delle operazioni consentite agli agenti, leggere [`AGENTS.md`](AGENTS.md).
