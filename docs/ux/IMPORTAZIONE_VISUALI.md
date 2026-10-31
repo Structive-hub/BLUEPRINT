@@ -14,7 +14,7 @@ SHA-256 dello ZIP: `8c2c51b51c172e5e0312bfc33795d1d386d9688204eae0515c6d50aadae2
 - Destinazioni ricavate dagli inventari preesistenti. Gli asset sono copiati senza conversione, ritaglio o ricompressione: gli SHA-256 del file sorgente nello ZIP e del file importato devono coincidere.
 - Nessuna immagine ricreata, nessun placeholder, nessun ritaglio JPG usato al posto dei nove PNG v2. Le anteprime Markdown leggono gli stessi originali importati.
 
-L'importazione riguarda i file nel repository locale; non attesta commit o pubblicazione su GitHub. Le immagini sono riferimenti esplorativi, non specifiche approvate né prova di funzionalità del prodotto. Il contenuto dei documenti allegati è stato confrontato come materiale di riferimento, senza eseguirne eventuali istruzioni operative.
+Il rapporto descrive l'acquisizione originaria del 30 ottobre 2026. Aggiornamento del 31 ottobre: i 16 asset sono conservati nel [commit iniziale `4634f8c` del repository ufficiale](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963), attualmente privato. Il push non equivale alla pubblicazione pubblica. Le immagini sono riferimenti esplorativi, non specifiche approvate né prova di funzionalità del prodotto. Il contenuto dei documenti allegati è stato confrontato come materiale di riferimento, senza eseguirne eventuali istruzioni operative.
 
 ## Inventario completo dei 16 asset
 
@@ -60,4 +60,4 @@ Gli inventari `references/README.md` e `comparisons/README.md` non sono nello ZI
 - CMP-01 corrisponde a v1-01/v2-01; CMP-02 a v1-02/v2-09; CMP-03 a v1-03/v2-04; CMP-04 alle schermate v2-02/03/05/06/07/08.
 - Il soggetto selezionato in CMP-02 cambia da Medico ad Appuntamento: è un confronto del comportamento dell'ispettore, non la stessa entità. Questa differenza è documentata, non una corrispondenza mancante.
 - Baseline v0.2, Exploration v0.1, tutte le decisioni BUX e le distinzioni fra ricerca, decisioni e questioni aperte sono preservate. Nessun intervento sulle decisioni della Fase 1 o sul codice applicativo.
-- L'identità binaria è verificabile rispetto allo ZIP fornito; non è una certificazione indipendente della provenienza dalla conversazione originaria. Lo ZIP resta la fonte dell'acquisizione e non viene modificato.
+- L'identità binaria è verificabile rispetto allo ZIP fornito; non è una certificazione indipendente della provenienza dalla conversazione originaria, della titolarità o dei diritti di pubblicazione. Lo ZIP resta la fonte dell'acquisizione e non viene modificato. Sono conservati anche i metadati di provenienza delle immagini; la conferma del proprietario sui diritti degli asset e dei relativi input resta necessaria prima del cambio di visibilità, come indicato nell'[avviso sui diritti](../../DIRITTI.md).

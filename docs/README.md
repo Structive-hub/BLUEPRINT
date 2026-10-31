@@ -2,7 +2,8 @@
 
 I documenti qui raccolti descrivono **l'architettura e le decisioni del progetto corrente**. Usare i percorsi relativi alla radice del repository.
 
-- [**Preparazione pubblica**](architecture/public-preparation.md) — copia indipendente, verifiche e decisioni ancora aperte.
+- [**Preparazione pubblica**](architecture/public-preparation.md) — repository ufficiale, cronologia indipendente, CI verificata e condizioni ancora da soddisfare prima del cambio di visibilità.
+- [**Consultazione e diritti riservati**](../DIRITTI.md) — nessuna licenza generale sui materiali originali; componenti di terzi e diritti UX/UI distinti.
 - [**Architettura**](architecture/README.md) — mappa dei moduli, dipendenze e limiti implementativi.
 - [**UX**](ux/README.md) — principi d'interazione e specifiche UX approvate.
 - [**Decisioni**](decisions/README.md) — registro delle scelte progettuali approvate.

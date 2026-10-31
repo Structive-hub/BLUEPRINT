@@ -1,6 +1,14 @@
-# Preparazione della nuova versione pubblica di Blueprint
+# Preparazione alla consultazione pubblica di Blueprint
 
-Data: 31 ottobre 2026. Questa copia è stata ottenuta esclusivamente dagli 80 file versionati di `main` dell'archivio privato, snapshot storico `5b4f571850f351a1de44946aa38fa71b7ef08182`. L'identificatore serve a documentare la provenienza; non è un oggetto Git della nuova copia.
+Aggiornamento: 31 ottobre 2026. Il [repository ufficiale Structive-hub/BLUEPRINT](https://github.com/Structive-hub/BLUEPRINT) è stato creato ed è **ancora privato**. Il commit iniziale [`4634f8cf432d6ce072a01304c827826e2c63d963`](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963) contiene 81 file, inclusi i 16 asset UX/UI, con cronologia indipendente e senza genitori. Autore e committer sono entrambi `Structive-hub <221842812+Structive-hub@users.noreply.github.com>`, verificati direttamente su GitHub.
+
+La copia è stata ottenuta esclusivamente dagli 80 file versionati di `main` dell'archivio storico privato, snapshot `5b4f571850f351a1de44946aa38fa71b7ef08182`, ai quali è stato aggiunto questo rapporto prima del commit iniziale. Lo snapshot documenta la provenienza; non è un oggetto Git della nuova cronologia. Nessuna modifica è stata apportata a BLUEPRINT-archive durante questa preparazione finale.
+
+## Decisione sui diritti e visibilità
+
+Il proprietario ha confermato che Blueprint sarà pubblico e consultabile su GitHub, ma **non sarà distribuito come progetto open source**. Non viene concessa una licenza generale di riutilizzo per codice, documentazione e materiali originali. L'[avviso sui diritti riservati](../../DIRITTI.md) distingue questa decisione dalle licenze dei componenti di terzi e dalle facoltà previste dalle condizioni GitHub, incluse consultazione e fork tramite il servizio, e dalla legge.
+
+Il repository non è stato reso pubblico. La riserva di diritti non certifica la titolarità dei materiali UX/UI: prima del cambio di visibilità il proprietario deve confermare i diritti necessari sugli asset e sui relativi input.
 
 ## Trasferimento e conservazione
 
@@ -15,41 +23,60 @@ Data: 31 ottobre 2026. Questa copia è stata ottenuta esclusivamente dagli 80 fi
 - `THIRD_PARTY_NOTICES.txt` incluso fra gli input del digest sorgenti ed emesso in `dist/` con controllo nel manifest.
 - Avvisi incorporati integralmente nel file HTML autonomo come testo non eseguibile; pacchetto CI aggiornato per includere anche il file separato.
 - Aggiunte regressioni che verificano conservazione delle notice e rifiuto di build obsolete o avvisi compilati alterati.
-- Nessuna licenza proprietaria o open source assegnata al codice, ai documenti o agli asset originali di Blueprint.
+- Nessuna licenza generale, proprietaria o open source, assegnata ai materiali originali. Gli avvisi di terzi restano integri e separati dall'avviso sui diritti riservati; non sono estesi al codice o agli asset originali di Blueprint.
 
 ## Nuova cronologia e riferimenti
 
-La nuova `.git` è vuota e indipendente, senza remote, alternates, vecchi oggetti o commit iniziale. Branch iniziale `main`; identità locale `Structive-hub <221842812+Structive-hub@users.noreply.github.com>`, con `user.useConfigOnly=true`. Nessuna configurazione globale dell'utente modificata.
+Il nuovo repository è stato inizializzato senza trasferire la vecchia `.git`, oggetti o riferimenti storici. Il commit iniziale `4634f8c` è stato pubblicato con push normale su `origin/main`; `origin` punta a `https://github.com/Structive-hub/BLUEPRINT.git`. La verifica iniziale su GitHub ha confermato un solo commit senza genitori e il solo branch `main`. Le successive correzioni documentali proseguono questa cronologia indipendente. Nessun alternates o vecchio oggetto Git è stato trasferito.
 
-Il workflow considera soltanto `main`, senza il vecchio branch eliminato. I rapporti tecnici e la decisione linguistica conservano le evidenze originarie, marcate come storiche. I collegamenti operativi alla CI dell'archivio privato sono stati rimossi. Non esiste ancora un nuovo repository GitHub e non è stata eseguita CI remota per questa copia.
+Il workflow considera `main` per push e pull request. I rapporti tecnici e la decisione linguistica conservano le evidenze originarie, marcate come storiche. I collegamenti operativi alla CI dell'archivio privato sono stati rimossi. La [CI del nuovo repository, esecuzione 41196069891](https://github.com/Structive-hub/BLUEPRINT/actions/runs/41196069891), verifica il commit iniziale ed è conclusa con successo su Linux e Windows.
 
-## Verifiche effettivamente eseguite
+## Verifiche della baseline ufficiale
 
 | Controllo | Esito |
 | --- | --- |
-| Installazione `npm ci` dal lockfile | Riuscita; audit npm 0 vulnerabilità alla data della preparazione |
-| Test del nucleo | 45/45 passati |
-| TypeScript, Vite e generazione HTML | Passati, usando PowerShell per la shell del singolo comando |
-| Controllo HTML autonomo | Passato: allineato a build, sorgenti e notice |
-| Distribuzione e launcher | 15 passati, 1 saltato, 0 falliti su 16 |
-| Test browser Chromium | 7/7 passati, inclusi recupero IT/EN e HTML `file://` |
-| Identità Git autore e committer | Noreply verificata, nessun commit creato |
+| Installazione `npm ci` dal lockfile e audit | Riusciti su Linux e Windows; audit 0 vulnerabilità il 31 ottobre 2026 |
+| Test del nucleo | 45/45 passati su ciascuna piattaforma |
+| TypeScript, Vite e generazione HTML | Passati su entrambe le piattaforme |
+| HTML autonomo e confronto con il file versionato | Passati su entrambe; sorgenti, build e notice allineati |
+| Distribuzione e launcher su Windows | 16/16 passati, nessun salto, incluso primo avvio tramite `avvia.cmd` |
+| Distribuzione e launcher su Linux | 15 passati, 1 salto previsto per il test esclusivamente Windows sull'assenza di Node, nessun fallimento |
+| Test browser Chromium | 7/7 passati su ciascuna piattaforma, inclusi recupero IT/EN e HTML `file://` |
+| Identità Git autore e committer | Noreply verificata nei metadati locali e su GitHub |
+| Contenuti remoti | Tutti gli 81 blob del commit iniziale corrispondono ai file preparati, incluse le 16 immagini |
 
-Il caso saltato è il primo avvio completo tramite `avvia.cmd` senza build: il controllo preliminare riproduce il limite di scrittura di `cmd.exe` su questo host. Il caso equivalente tramite launcher JavaScript e i test con build pronta sono passati. La futura CI Windows mantiene `BLUEPRINT_REQUIRE_CMD_WRITES=1`, che impedisce di nascondere il salto. I test locali non sostituiscono questa verifica remota ancora da eseguire.
+Nella preparazione locale era stato saltato il primo avvio completo tramite `avvia.cmd` per un limite dell'host. La prova è ora superata nella CI Windows con `BLUEPRINT_REQUIRE_CMD_WRITES=1`: il limite locale non costituisce più una verifica remota aperta. Il solo salto Linux riguarda un caso non applicabile a quella piattaforma.
 
-## Decisioni e passi ancora aperti
+## Audit di log e artifact della nuova CI
 
-- Decidere la licenza del codice, della documentazione e degli asset originali, senza confonderla con gli avvisi delle dipendenze.
-- Confermare i diritti sugli input e sui materiali UX/UI, come indicato nell'audit precedente.
-- Dopo l'approvazione del proprietario: creare il nuovo repository, il commit iniziale con identità noreply e la pubblicazione. Nessuna di queste azioni è stata eseguita.
-- Configurare protezioni del branch e criteri Actions nel nuovo repository; verificarne la CI su Linux e Windows.
+Inventario remoto verificato il 31 ottobre 2026: una sola esecuzione CI e quattro artifact. I log di entrambi i job sono stati letti; tutti e quattro gli ZIP sono stati scaricati e verificati rispetto al digest SHA-256 fornito da GitHub. Sono stati ispezionati anche i due ZIP incorporati nei report HTML: 22 file complessivi oltre ai due contenitori annidati, inclusi JSON, diagnostica, esportazioni del workspace e quattro screenshot esaminati visivamente. Nessun artifact è rimasto inaccessibile.
+
+| Artifact | ID GitHub | Esito e trattamento |
+| --- | --- | --- |
+| `verifiche-ubuntu-latest` | `13040717483` | Conservabile: report e dati dimostrativi dei test; identità Git noreply, nessun dato personale del proprietario rilevato |
+| `verifiche-windows-latest` | `13041101496` | Conservabile: stesso perimetro; screenshot, diagnostica e JSON verificati |
+| `distribuzione-ubuntu-latest` | `13041106929` | Conservabile: HTML, manifest e notice; avvisi di terzi completi nel file separato e nell'HTML |
+| `distribuzione-windows-latest` | `13040921711` | Conservabile: stessi controlli sugli avvisi, integralmente corrispondenti al repository |
+
+Non sono state rilevate credenziali non mascherate, email personali del proprietario, percorsi del suo computer o dati sanitari reali. Nei log e nei report restano i normali percorsi effimeri dei runner GitHub, l'identità pubblica dell'account e i dati sintetici previsti dai test. Gli indirizzi negli avvisi delle dipendenze sono attribuzioni pubbliche di terzi, non recapiti del proprietario. Gli artifact sono istantanee della baseline; non attestano l'applicazione di aggiornamenti documentali successivi e non concedono una licenza sui materiali originali.
+
+Tutti e quattro gli artifact sono conservabili sotto il profilo dei contenuti esaminati; non è stata effettuata alcuna rimozione o modifica. Questo esito non sostituisce la conferma dei diritti UX/UI. I controlli sui metadati del repository e sui documenti non hanno rilevato recapiti personali o percorsi locali identificativi. Le ricerche automatiche sono state integrate dalla lettura dei report e dal confronto con le fixture dei test; non costituiscono una garanzia assoluta contro ogni possibile informazione sensibile.
+
+## Condizioni prima della pubblicazione pubblica
+
+- **Condizione necessaria:** conferma del proprietario sui diritti di pubblicazione dei 16 asset UX/UI e dei relativi input, inclusi eventuali elementi di terzi. Hash e metadati di provenienza non certificano tali diritti.
+- **Operazione ancora da autorizzare:** sincronizzare su GitHub l'aggiornamento documentale sui diritti e sullo stato reale prima di cambiare la visibilità; il commit iniziale è già sul remoto. Questa attività prepara e versiona localmente le sole correzioni documentali, senza push o cambio di visibilità.
+- **Decisione già assunta:** consultazione pubblica senza licenza generale di riutilizzo dei materiali originali, come indicato in `DIRITTI.md`. Nessuna ulteriore licenza è introdotta.
+- **Miglioramenti successivi:** riesaminare protezioni di `main`, permessi minimi dei workflow, fissaggio delle azioni a commit e durata di conservazione degli artifact. Nessuna impostazione è modificata o dichiarata attiva da questo rapporto.
 - Mantenere evidenti i requisiti strutturali aperti, inclusa la predisposizione all'internazionalizzazione. Nessuna traduzione inglese globale introdotta o dichiarata completata.
 
-## Integrità finale della preparazione
+## Integrità della preparazione iniziale e aggiornamento documentale
 
-Verificati 80 file trasferiti senza mancanze, 81 file candidati al futuro commit con il solo nuovo rapporto aggiunto, 16 immagini identiche e 162 collegamenti locali validi. Le correzioni riguardano 13 file dello snapshot: distribuzione generata, notice, catena di build, workflow, fixture/test e documentazione. Nessun file di `src/`, esempio, Baseline UX o Exploration è stato modificato. Nessun artefatto CI originario è presente; gli output locali dei test sono esclusi da Git.
+Nella preparazione iniziale: 80 file trasferiti senza mancanze, 81 file poi inclusi nel commit iniziale con questo rapporto aggiunto, 16 immagini identiche e 162 collegamenti locali validi. Le correzioni iniziali riguardavano 13 file dello snapshot: distribuzione generata, notice, catena di build, workflow, fixture/test e documentazione. Nessun file di `src/`, esempio, Baseline UX o Exploration è stato modificato. Nessun artifact CI originario è stato trasferito; gli output locali dei test sono esclusi da Git.
 
-La nuova `.git` non contiene l'oggetto dello snapshot storico, commit o remote. I controlli Git sono stati eseguiti con accesso alla nuova cartella; le assenze di riferimenti in `git fsck` sono attese in un repository senza commit. L'archivio originario rimane pulito e al commit di partenza.
+La preparazione finale aggiorna soltanto README, indici e stato dell'archivio UX, questo rapporto e il nuovo avviso `DIRITTI.md`. Codice, immagini, Baseline v0.2, Exploration v0.1, workflow, avvisi delle dipendenze e HTML generato restano invariati rispetto a `4634f8c`. L'archivio storico non viene modificato.
+
+Verifiche dell'aggiornamento documentale del 31 ottobre: 175 collegamenti locali validi, 44 miniature cliccabili preservate, nessuna segnalazione nella ricerca di credenziali, email personali o percorsi identificativi nei Markdown. Passati nuovamente `npm test` (45/45), `npm run build` e `npm run check:standalone`, usando PowerShell come shell del singolo comando di build; l'HTML rigenerato è identico al file versionato. Passato anche `git diff --check`. Nessuna nuova suite di test o dipendenza introdotta. La CI remota citata sopra appartiene al commit iniziale; il successivo commit documentale locale non è stato pubblicato né sottoposto a una nuova CI remota.
 
 ## Inventario dei file trasferiti
 
@@ -152,4 +179,4 @@ Elenco completo degli 80 file dello snapshot, prima delle correzioni nella copia
 - `tests/launcher.test.mjs`
 - `vite.config.mjs`
 
-A questi si aggiunge soltanto il presente rapporto, non esistente nello snapshot di origine.
+A questi si aggiunse questo rapporto prima del commit iniziale, non esistente nello snapshot di origine. L'inventario precedente descrive il trasferimento storico; la preparazione finale aggiunge `DIRITTI.md` e aggiorna soltanto i documenti indicati sopra.

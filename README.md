@@ -4,7 +4,13 @@
 
 > **Stato:** prototipo v0.2 (incremento 1). **Fase 1 (nucleo) consolidata sul perimetro tecnico verificato il 30 ottobre 2026**. Prima del passaggio alla Fase 2 restano da riesaminare i requisiti strutturali aperti, inclusa la predisposizione all'internazionalizzazione. Le capacità pianificate non sono automaticamente disponibili.
 
-> **Preparazione della nuova versione pubblica — 31 ottobre 2026:** questa copia ha una cronologia Git indipendente. Il repository originario resta un archivio storico privato; commit, PR e prove CI citati nei rapporti storici non appartengono alla nuova cronologia e non sono istruzioni operative. Non è stato ancora creato un nuovo repository GitHub. Stato, verifiche e limiti: [Preparazione pubblica](docs/architecture/public-preparation.md).
+> **Repository ufficiale — 31 ottobre 2026:** [Structive-hub/BLUEPRINT](https://github.com/Structive-hub/BLUEPRINT) è stato creato con cronologia indipendente e commit iniziale [`4634f8c`](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963). La [CI Linux e Windows](https://github.com/Structive-hub/BLUEPRINT/actions/runs/41196069891) è superata. Il repository è attualmente **privato**, in preparazione alla consultazione pubblica. Il repository originario resta un archivio storico privato; le evidenze citate nei rapporti storici non appartengono alla nuova cronologia. Stato e verifiche: [Preparazione pubblica](docs/architecture/public-preparation.md).
+
+## Consultazione e diritti riservati
+
+**Blueprint sarà pubblico e consultabile su GitHub, ma non è distribuito come progetto open source. Non viene concessa una licenza generale di riutilizzo per codice, documentazione e materiali originali.** Restano ferme le condizioni GitHub, comprese consultazione e fork tramite la piattaforma, e le eccezioni previste dalla legge. Gli usi ulteriori richiedono l'autorizzazione dei rispettivi titolari: [avviso sui diritti](DIRITTI.md).
+
+I componenti di terzi mantengono le proprie licenze e attribuzioni, raccolte in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt); l'avviso sui materiali originali non le restringe. La provenienza documentata dei 16 asset UX/UI non certifica la titolarità: la conferma del proprietario resta necessaria prima della pubblicazione pubblica.
 
 ## Che cos'è Blueprint
 
@@ -75,7 +81,7 @@ Per rigenerare entrambi i formati distribuibili dalla radice:
     npm run build
     npm run check:standalone
 
-`build` controlla TypeScript, genera `dist/` e il suo manifest, poi genera l'HTML. Gli avvisi in `THIRD_PARTY_NOTICES.txt` sono inclusi integralmente nell'HTML come testo non eseguibile, disponibili nel sorgente del documento, e copiati anche in `dist/THIRD_PARTY_NOTICES.txt`. Il manifest verifica gli avvisi e il digest dei sorgenti include il file delle notice: una modifica richiede una nuova build. Le distribuzioni CI includono anche il file degli avvisi separato. La licenza del codice, dei documenti e degli asset originali di Blueprint resta da decidere; gli avvisi non la sostituiscono. Il manifest registra l'impronta dei sorgenti e degli asset. Il generatore rifiuta una build vecchia o danneggiata; `--check` confronta senza scrivere. Versionare l'HTML insieme alle modifiche dei sorgenti. La CI rigenera e rifiuta differenze.
+`build` controlla TypeScript, genera `dist/` e il suo manifest, poi genera l'HTML. Gli avvisi in `THIRD_PARTY_NOTICES.txt` sono inclusi integralmente nell'HTML come testo non eseguibile, disponibili nel sorgente del documento, e copiati anche in `dist/THIRD_PARTY_NOTICES.txt`. Il manifest verifica gli avvisi e il digest dei sorgenti include il file delle notice: una modifica richiede una nuova build. Le distribuzioni CI includono anche il file degli avvisi separato. Questi avvisi disciplinano i componenti di terzi e non concedono una licenza sui materiali originali di Blueprint, per i quali vale l'[avviso sui diritti riservati](DIRITTI.md). Il manifest registra l'impronta dei sorgenti e degli asset. Il generatore rifiuta una build vecchia o danneggiata; `--check` confronta senza scrivere. Versionare l'HTML insieme alle modifiche dei sorgenti. La CI rigenera e rifiuta differenze.
 
 ### Windows: versione compilata con server locale
 

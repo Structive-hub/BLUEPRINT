@@ -76,6 +76,6 @@ Decisioni, risultati e limiti: [Consolidamento Fase 1](phase-1-consolidation.md)
 
 ## Avvisi di licenza nella distribuzione
 
-`THIRD_PARTY_NOTICES.txt` è un input del digest dei sorgenti. Vite lo emette nella distribuzione e il manifest ne registra il digest. Il generatore incorpora nel documento autonomo gli avvisi verificati come testo non eseguibile; le copie HTML mantengono così copyright e condizioni dei componenti terzi anche senza file esterni. Il workflow include inoltre gli avvisi nel pacchetto distribuibile. La licenza originale di Blueprint non viene definita da questi avvisi.
+`THIRD_PARTY_NOTICES.txt` è un input del digest dei sorgenti. Vite lo emette nella distribuzione e il manifest ne registra il digest. Il generatore incorpora nel documento autonomo gli avvisi verificati come testo non eseguibile; le copie HTML mantengono così copyright e condizioni dei componenti terzi anche senza file esterni. Il workflow include inoltre gli avvisi nel pacchetto distribuibile. Questi avvisi non concedono una licenza sui materiali originali: la decisione di consultazione pubblica senza licenza generale di riutilizzo è comunicata nell'[avviso sui diritti](../../DIRITTI.md), separato dalle licenze dei componenti di terzi.
 
 I rapporti storici sono conservati come documentazione dell'archivio privato. Per stato della copia indipendente, prove attuali e limiti leggere [Preparazione pubblica](public-preparation.md).
