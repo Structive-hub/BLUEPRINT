@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+Blueprint-apri.html text eol=lf
+*.cmd text eol=crlf

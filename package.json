@@ -1,0 +1,33 @@
+{
+  "name": "blueprint-proof-of-concept",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "demo": "node --experimental-strip-types scripts/demo.ts",
+    "start": "node scripts/serve-built.mjs",
+    "demo:v0": "node --experimental-strip-types scripts/demo-v0.ts",
+    "check:standalone": "node scripts/make-standalone.mjs --check",
+    "test:distribution": "node --test tests/distribution.test.mjs tests/launcher.test.mjs",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.10.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "typescript": "5.9.3",
+    "vite": "7.3.7"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Documento requisiti Blueprint v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "title",
+    "objective",
+    "notes",
+    "requirements"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "semantic",
+          "statement"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,50}$"
+          },
+          "semantic": {
+            "enum": [
+              "registeredBooking",
+              "chooseDoctor",
+              "multipleServices",
+              "doctorAgenda",
+              "moveAppointment",
+              "emailAfterConfirmation",
+              "noReception",
+              "noPayments",
+              "noClinicalData",
+              "otherDoctorsUndefined",
+              "unmapped"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "description": "La validazione runtime applica anche unicità di ID e codici semantici (tranne unmapped). Gli extra vengono ignorati; non trasportano approvazioni."
+}

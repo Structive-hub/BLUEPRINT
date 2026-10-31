@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "title": "Nuovo progetto",
+  "objective": "",
+  "notes": "Usare semantic=unmapped per contenuti fuori dal vocabolario mock.",
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "semantic": "unmapped",
+      "statement": "Descrivi un requisito."
+    }
+  ]
+}

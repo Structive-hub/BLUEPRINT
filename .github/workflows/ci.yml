@@ -1,0 +1,51 @@
+name: Verifica Blueprint
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  consolidamento:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      BLUEPRINT_REQUIRE_CMD_WRITES: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.18.0'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:standalone
+      - name: HTML distribuito allineato ai sorgenti versionati
+        run: git diff --exit-code -- Blueprint-apri.html
+      - run: npm run test:distribution
+      - name: Nessun esempio modificato dalle demo
+        run: git diff --exit-code -- examples
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - run: npm audit
+      - name: Report browser e diagnostica
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verifiche-${{ matrix.os }}
+          path: |
+            playwright-report/
+            test-results/
+            blueprint-avvio.log
+          if-no-files-found: ignore
+      - name: HTML autonomo e manifest della build verificata
+        uses: actions/upload-artifact@v4
+        with:
+          name: distribuzione-${{ matrix.os }}
+          path: |
+            Blueprint-apri.html
+            THIRD_PARTY_NOTICES.txt
+            dist/build-manifest.json

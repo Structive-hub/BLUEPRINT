@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="it"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#122d36"/><title>Blueprint · Editor del modello</title></head>
+<body>
+<section id="blueprint-boot" aria-live="polite" style="font-family:Segoe UI,sans-serif;max-width:800px;margin:36px auto;padding:24px;border:1px solid #aac4bc;border-radius:8px;color:#183c39;background:#f5faf7">
+ <h1 id="boot-title">Avvio di Blueprint / Starting Blueprint</h1>
+ <p id="boot-help">Caricamento… Se la schermata rimane vuota, consulta README.md. Non cancellare i dati del browser.<br>Loading… If the screen stays empty, consult README.md. Do not clear browser data.</p>
+ <button id="boot-it" type="button">Italiano</button> <button id="boot-en" type="button">English</button>
+ <button id="boot-download" type="button" hidden>Scarica diagnostica / Download diagnostics</button>
+ <details id="boot-details" hidden><summary id="boot-details-title">Dettagli / Details</summary><pre id="boot-diagnostic" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre></details>
+ <noscript>JavaScript è necessario. I dati non sono stati modificati. / JavaScript is required. Saved data has not been changed.</noscript>
+</section>
+<div id="root"></div>
+<!--BLUEPRINT_BOOT_RECOVERY-->
+<script type="module" src="/src/app/bootstrap.ts"></script>
+</body></html>
