@@ -16,6 +16,8 @@ SHA-256 dello ZIP: `8c2c51b51c172e5e0312bfc33795d1d386d9688204eae0515c6d50aadae2
 
 Il rapporto descrive l'acquisizione originaria del 30 ottobre 2026. Aggiornamento del 31 ottobre: i 16 asset sono conservati nel [commit iniziale `4634f8c` del repository ufficiale](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963), attualmente privato. Il push non equivale alla pubblicazione pubblica. Le immagini sono riferimenti esplorativi, non specifiche approvate né prova di funzionalità del prodotto. Il contenuto dei documenti allegati è stato confrontato come materiale di riferimento, senza eseguirne eventuali istruzioni operative.
 
+La [dichiarazione di provenienza del proprietario del 31 ottobre 2026](README.md#provenienza-dei-materiali-uxui) documenta il processo di ricerca comparativa, brainstorming e generazione assistita da intelligenza artificiale. Integra la fonte di acquisizione e gli hash riportati qui senza trasformare il controllo visivo in una certificazione legale di originalità o titolarità.
+
 ## Inventario completo dei 16 asset
 
 Il percorso sorgente è quello effettivo nello ZIP. I nomi storici della conversazione rimangono nel relativo inventario; la corrispondenza è stata verificata tramite contenuto e tavole comparative, non tramite uguaglianza dei nomi.

@@ -10,6 +10,8 @@ Il proprietario ha confermato che Blueprint sarà pubblico e consultabile su Git
 
 Il repository non è stato reso pubblico. La riserva di diritti non certifica la titolarità dei materiali UX/UI: prima del cambio di visibilità il proprietario deve confermare i diritti necessari sugli asset e sui relativi input.
 
+Il proprietario ha fornito una [dichiarazione di provenienza dei materiali UX/UI](../ux/README.md#provenienza-dei-materiali-uxui): ricerca comparativa su prodotti esistenti, analisi progettuale, brainstorming e generazione assistita da intelligenza artificiale. I prodotti studiati sono riferimenti di ricerca, non componenti da riprodurre; le immagini rappresentano proposte esplorative per Blueprint e non interfacce ufficiali dei prodotti esaminati. La verifica visiva non ha individuato riproduzioni riconoscibili di marchi o interfacce di terzi e non certifica legalmente originalità o titolarità. La dichiarazione documenta il processo creativo; non viene interpretata come conferma dei diritti di pubblicazione sugli asset e sui relativi input.
+
 ## Trasferimento e conservazione
 
 - Archivio privato lasciato invariato; nessuna vecchia directory `.git`, nessun oggetto Git o artifact CI trasferito.
@@ -76,7 +78,7 @@ Nella preparazione iniziale: 80 file trasferiti senza mancanze, 81 file poi incl
 
 La preparazione finale aggiorna soltanto README, indici e stato dell'archivio UX, questo rapporto e il nuovo avviso `DIRITTI.md`. Codice, immagini, Baseline v0.2, Exploration v0.1, workflow, avvisi delle dipendenze e HTML generato restano invariati rispetto a `4634f8c`. L'archivio storico non viene modificato.
 
-Verifiche dell'aggiornamento documentale del 31 ottobre: 175 collegamenti locali validi, 44 miniature cliccabili preservate, nessuna segnalazione nella ricerca di credenziali, email personali o percorsi identificativi nei Markdown. Passati nuovamente `npm test` (45/45), `npm run build` e `npm run check:standalone`, usando PowerShell come shell del singolo comando di build; l'HTML rigenerato è identico al file versionato. Passato anche `git diff --check`. Nessuna nuova suite di test o dipendenza introdotta. La CI remota citata sopra appartiene al commit iniziale; il successivo commit documentale locale non è stato pubblicato né sottoposto a una nuova CI remota.
+Verifiche dell'aggiornamento documentale del 31 ottobre: 178 collegamenti locali validi, 44 miniature cliccabili preservate, nessuna segnalazione nella ricerca di credenziali, email personali o percorsi identificativi nei Markdown. Passati nuovamente `npm test` (45/45), `npm run build` e `npm run check:standalone`, usando PowerShell come shell del singolo comando di build; l'HTML rigenerato è identico al file versionato. Il successivo inserimento della dichiarazione di provenienza ha interessato soltanto quattro Markdown: ricontrollati collegamenti, ancore, miniature e perimetro delle modifiche, senza rieseguire test applicativi per questa sola integrazione testuale. Passato anche `git diff --check`. Nessuna nuova suite di test o dipendenza introdotta. La CI remota citata sopra appartiene al commit iniziale; i successivi commit documentali locali non sono stati pubblicati né sottoposti a una nuova CI remota.
 
 ## Inventario dei file trasferiti
 

@@ -20,4 +20,6 @@ Dipendenze, componenti incorporati e relativi avvisi mantengono le proprie licen
 
 La [documentazione UX](docs/ux/README.md) e il [rapporto di importazione](docs/ux/IMPORTAZIONE_VISUALI.md) conservano fonte, corrispondenze e hash dei 16 asset. Queste evidenze attestano l'acquisizione e l'integrità dei file, non certificano titolarità o autorizzazioni sugli input, sulle immagini e su eventuali elementi di terzi.
 
+La [dichiarazione di provenienza del proprietario](docs/ux/README.md#provenienza-dei-materiali-uxui) descrive ricerca comparativa, brainstorming e generazione assistita da intelligenza artificiale. I prodotti studiati sono riferimenti di ricerca e le immagini sono proposte esplorative per Blueprint, non interfacce ufficiali dei prodotti esaminati. La verifica visiva non ha rilevato riproduzioni riconoscibili di marchi o interfacce di terzi; non certifica legalmente originalità o titolarità.
+
 Prima di rendere pubblico il repository, il proprietario deve confermare i diritti necessari alla pubblicazione dei materiali UX/UI e dei relativi input. Gli eventuali diritti di terzi restano impregiudicati. Questa verifica non è sostituita dalla presente riserva di diritti.

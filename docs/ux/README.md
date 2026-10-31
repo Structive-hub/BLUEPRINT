@@ -18,6 +18,18 @@ Questa cartella contiene la **ricerca UX**, le **decisioni consolidate** e l'inv
 - I mockup sono **riferimenti esplorativi**, non specifiche approvate né prova di funzionalità implementate.
 - Fonte, confronto binario e metadati di provenienza non certificano la titolarità. Prima del cambio di visibilità resta necessaria la conferma del proprietario sui diritti di pubblicazione degli asset e dei relativi input. Consultare l'[avviso sui diritti riservati](../../DIRITTI.md), distinto dalle licenze dei componenti di terzi.
 
+## Provenienza dei materiali UX/UI
+
+Dichiarazione del proprietario, 31 ottobre 2026.
+
+Gli asset UX/UI di BLUEPRINT sono stati sviluppati attraverso un processo di ricerca comparativa su prodotti software esistenti, analisi delle relative scelte progettuali, brainstorming e generazione assistita da intelligenza artificiale.
+
+I prodotti analizzati sono stati utilizzati come riferimenti di studio per individuare problemi, approcci e possibili soluzioni progettuali, non come componenti da riprodurre direttamente.
+
+Le immagini documentano proposte esplorative per BLUEPRINT e non rappresentano interfacce ufficiali dei prodotti esaminati.
+
+La verifica visiva effettuata non ha individuato riproduzioni riconoscibili di marchi o interfacce di terzi. Tale verifica non costituisce certificazione legale di originalità o titolarità.
+
 ## Regole per chi lavora sull'UX
 
 - Mantenere distinti **ricerca**, **decisioni confermate** e **questioni aperte**.
