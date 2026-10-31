@@ -13,10 +13,10 @@ Questa cartella contiene la **ricerca UX**, le **decisioni consolidate** e l'inv
 
 - I **due documenti Markdown** sono presenti nel repository.
 - Sono presenti **12 originali PNG** (3 v1 e 9 v2) e **4 tavole comparative JPG**, importati e verificati dallo ZIP `Blueprint_UX_Documentazione_Visuale_Completa.zip`. Le anteprime sono incorporate nelle tabelle di [References](references/README.md) e [Comparisons](comparisons/README.md), con collegamenti relativi agli originali.
-- Il [rapporto di importazione](IMPORTAZIONE_VISUALI.md) inventaria tutti i 19 file dello ZIP, documenta le corrispondenze, gli hash e le verifiche. I 16 asset sono presenti anche nel [commit iniziale del repository ufficiale](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963), attualmente privato; questo non equivale al cambio di visibilità pubblica.
+- Il [rapporto di importazione](IMPORTAZIONE_VISUALI.md) inventaria tutti i 19 file dello ZIP, documenta le corrispondenze, gli hash e le verifiche. I 16 asset sono presenti nel [commit iniziale del repository ufficiale](https://github.com/Structive-hub/BLUEPRINT/commit/4634f8cf432d6ce072a01304c827826e2c63d963), ora pubblico e consultabile con diritti riservati.
 - I tre Markdown dello ZIP non sostituiscono i documenti correnti: **Baseline v0.2 ed Exploration v0.1 sono preservate integralmente**, incluse decisioni `BUX-*`, ricerca e questioni aperte.
 - I mockup sono **riferimenti esplorativi**, non specifiche approvate né prova di funzionalità implementate.
-- Fonte, confronto binario e metadati di provenienza non certificano la titolarità. Prima del cambio di visibilità resta necessaria la conferma del proprietario sui diritti di pubblicazione degli asset e dei relativi input. Consultare l'[avviso sui diritti riservati](../../DIRITTI.md), distinto dalle licenze dei componenti di terzi.
+- Fonte, confronto binario, metadati di provenienza e visibilità pubblica non certificano la titolarità. La verifica dei diritti di pubblicazione degli asset e dei relativi input resta responsabilità del proprietario e non è attestata dall'audit visivo. Consultare l'[avviso sui diritti riservati](../../DIRITTI.md), distinto dalle licenze dei componenti di terzi.
 
 ## Provenienza dei materiali UX/UI
 

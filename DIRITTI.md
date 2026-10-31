@@ -2,7 +2,7 @@
 
 Decisione del proprietario del progetto, 31 ottobre 2026.
 
-Blueprint è destinato alla consultazione pubblica su GitHub, ma **non è distribuito come progetto open source**. Non viene concessa una licenza generale di riutilizzo per il codice, la documentazione e i materiali originali. I diritti restano riservati ai rispettivi titolari, nei limiti dei diritti effettivamente spettanti a ciascuno.
+Blueprint è pubblico e consultabile su GitHub, ma **non è distribuito come progetto open source**. Non viene concessa una licenza generale di riutilizzo per il codice, la documentazione e i materiali originali. I diritti restano riservati ai rispettivi titolari, nei limiti dei diritti effettivamente spettanti a ciascuno.
 
 ## Consultazione e riutilizzo
 
@@ -22,4 +22,4 @@ La [documentazione UX](docs/ux/README.md) e il [rapporto di importazione](docs/u
 
 La [dichiarazione di provenienza del proprietario](docs/ux/README.md#provenienza-dei-materiali-uxui) descrive ricerca comparativa, brainstorming e generazione assistita da intelligenza artificiale. I prodotti studiati sono riferimenti di ricerca e le immagini sono proposte esplorative per Blueprint, non interfacce ufficiali dei prodotti esaminati. La verifica visiva non ha rilevato riproduzioni riconoscibili di marchi o interfacce di terzi; non certifica legalmente originalità o titolarità.
 
-Prima di rendere pubblico il repository, il proprietario deve confermare i diritti necessari alla pubblicazione dei materiali UX/UI e dei relativi input. Gli eventuali diritti di terzi restano impregiudicati. Questa verifica non è sostituita dalla presente riserva di diritti.
+La visibilità pubblica del repository non certifica i diritti sui materiali UX/UI o sui relativi input. La verifica dei diritti necessari alla pubblicazione resta responsabilità del proprietario; non è attestata dalla sola dichiarazione di provenienza o dall'audit visivo. Gli eventuali diritti di terzi restano impregiudicati. Questa verifica non è sostituita dalla presente riserva di diritti.
